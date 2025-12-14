@@ -1,4 +1,14 @@
 ```bash
+sudo ufw allow ssh
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 25/tcp
+sudo ufw allow 6443/tcp
+sudo ufw allow from 10.63.0.0/16 to any
+sudo ufw allow from 10.64.0.0/16 to any
+```
+
+```bash
 curl -fL https://get.k3s.io | \
 sh -s - server \
   --disable traefik \
