@@ -7,7 +7,8 @@ metadata:
     kubernetes.io/service-name: proxy-service
 addressType: IPv4
 ports:
-  - port: 25
+  - name: smtp
+    port: 25
     protocol: TCP
 endpoints:
   - addresses:
