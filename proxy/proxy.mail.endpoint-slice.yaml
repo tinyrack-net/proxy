@@ -1,0 +1,38 @@
+apiVersion: discovery.k8s.io/v1
+kind: EndpointSlice
+metadata:
+  name: proxy-smtp-endpoint-slice
+  namespace: proxy-system
+  labels:
+    kubernetes.io/service-name: proxy-service
+addressType: IPv4
+ports:
+  - name: smtp
+    port: 25
+    protocol: TCP
+  - name: smtp-submission
+    port: 587
+    protocol: TCP
+  - name: smtp-ssl
+    port: 465
+    protocol: TCP
+  - name: imap
+    port: 143
+    protocol: TCP
+  - name: imaps
+    port: 993
+    protocol: TCP
+  - name: pop3
+    port: 110
+    protocol: TCP
+  - name: pop3s
+    port: 995
+    protocol: TCP
+  - name: sieve
+    port: 4190
+    protocol: TCP
+endpoints:
+  - addresses:
+      - "10.132.246.4"
+    conditions:
+      ready: true
