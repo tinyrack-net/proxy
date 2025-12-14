@@ -1,0 +1,18 @@
+apiVersion: discovery.k8s.io/v1
+kind: EndpointSlice
+metadata:
+  name: proxy-web-endpoint-slice
+  namespace: proxy-system
+  labels:
+    kubernetes.io/service-name: proxy-service
+addressType: IPv4
+ports:
+  - port: 80
+    protocol: TCP
+  - port: 443
+    protocol: TCP
+endpoints:
+  - addresses:
+      - "10.132.246.2"
+    conditions:
+      ready: true

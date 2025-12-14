@@ -1,0 +1,16 @@
+apiVersion: discovery.k8s.io/v1
+kind: EndpointSlice
+metadata:
+  name: proxy-smtp-endpoint-slice
+  namespace: proxy-system
+  labels:
+    kubernetes.io/service-name: proxy-service
+addressType: IPv4
+ports:
+  - port: 25
+    protocol: TCP
+endpoints:
+  - addresses:
+      - "10.132.246.2"
+    conditions:
+      ready: true
