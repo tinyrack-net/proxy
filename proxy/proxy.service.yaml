@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: proxies-service
-  namespace: proxies-system
+  name: proxy-service
+  namespace: proxy-system
 spec:
   type: LoadBalancer
   ports:
