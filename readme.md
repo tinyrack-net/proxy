@@ -1,4 +1,11 @@
 ```bash
+sudo tailscale up \
+  --accept-routes=false \
+  --accept-dns=false \
+  --reset
+```
+
+```bash
 # SSH 포트 허용
 sudo ufw allow ssh
 
@@ -27,7 +34,9 @@ curl -fL https://get.k3s.io | \
 sh -s - server \
   --disable traefik \
   --cluster-cidr=10.63.0.0/16 \
-  --service-cidr=10.64.0.0/16
+  --service-cidr=10.64.0.0/16 \
+  --tls-san=100.110.44.59 \
+  --tls-san=homelab-proxy-k3s.time-inconnu.ts.net
 ```
 
 ```bash
