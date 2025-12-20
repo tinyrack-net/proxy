@@ -1,6 +1,6 @@
 ```bash
 sudo tailscale up \
-  --accept-routes=false \
+  --accept-routes=true \
   --accept-dns=false \
   --reset
 ```
