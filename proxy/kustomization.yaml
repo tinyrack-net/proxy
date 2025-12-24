@@ -4,4 +4,5 @@ resources:
   - proxy.namespace.yaml
   - proxy.service.yaml
   - proxy.web.endpoint-slice.yaml
+  - proxy.postgres.endpoint-slice.yaml
   - proxy.mail.endpoint-slice.yaml
