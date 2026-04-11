@@ -43,11 +43,9 @@ sh -s - server \
 ```
 
 ```bash
-flux bootstrap gitea \
-  --token-auth \
-  --hostname=git.winetree94.com \
+flux bootstrap github \
   --repository=proxy \
   --branch=main \
   --path=./clusters \
-  --owner=tinyrack
+  --owner=tinyrack-net
 ```
